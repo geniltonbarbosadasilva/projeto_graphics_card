@@ -14,8 +14,8 @@ def toString(number):
 
 fileIn = input("Arquivo de entrada: ")
 fileOut = input("Arquivo de saida: ")
-imageWidth = input("Largura da imagem: ")
-imageHeight = input("Altura da imagem: ")
+imageWidth = int(input("Largura da imagem: "))
+imageHeight = int(input("Altura da imagem: "))
 
 image = Image.open(fileIn)
 pixels = image.load()
