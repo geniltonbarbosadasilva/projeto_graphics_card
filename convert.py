@@ -12,12 +12,16 @@ def toString(number):
     
     return r + g + b + " "
 
-image = Image.open("image.png")
+fileIn = input("Arquivo de entrada: ")
+fileOut = input("Arquivo de saida: ")
+imageWidth = input("Largura da imagem: ")
+imageHeight = input("Altura da imagem: ")
+
+image = Image.open(fileIn)
 pixels = image.load()
 
-out_file = open("image", "w")
+out_file = open(fileOut, "w")
 
-for y in range(32):
-    for x in range(64):
-        # print(toString(pixels[x,y]))
+for y in range(imageHeight):
+    for x in range(imageWidth):
         out_file.write(toString(pixels[x,y]))
